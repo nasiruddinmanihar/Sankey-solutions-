@@ -1,0 +1,15 @@
+.app-name {
+    margin-right: 20px; /* Adjust the value as needed */
+  }
+  
+  .spacer {
+    flex: 1; /* Use flexbox to push the Sign Out button to the right */
+  }
+
+  .username {
+    margin-left: 16px; /* Adjust as needed */
+  }
+
+  .sign-out-btn {
+    margin-right: 16px; /* Adjust as needed */
+  }

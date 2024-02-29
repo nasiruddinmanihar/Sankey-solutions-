@@ -1,0 +1,15 @@
+<app-home-navbar></app-home-navbar>
+<div class="movie-list">
+  <div *ngFor="let movie of movies" class="movie-item">
+    <a [routerLink]="['/movie', movie.imdbID]" class="movie-link">
+      <div class="movie-details">
+        <img [src]="movie.Poster" class="movie-poster" alt="{{ movie.Title }} Poster">
+        <div class="movie-info">
+          <h2>{{ movie.Title }}</h2>
+          <p class="movie-year">Released: {{ movie.Year }}</p>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+

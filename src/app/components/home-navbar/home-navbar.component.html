@@ -1,0 +1,11 @@
+
+<mat-toolbar>
+  <span class="app-name">MovieUI</span>
+  <span class="spacer"></span>
+  <ng-container  *ngIf="currentUser">
+    <div class="username">Welcome, {{ currentUser.username }}&nbsp;</div>
+  </ng-container>
+  
+  <button mat-button color="accent" class="sign-out-btn" (click)="logout()">Sign Out</button>
+</mat-toolbar>
+
