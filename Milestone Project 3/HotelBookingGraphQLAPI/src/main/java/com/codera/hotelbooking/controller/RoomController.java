@@ -36,10 +36,7 @@ public class RoomController {
         this.hotelService=hotelService;
     }
 
-    @Operation(
-    		summary="Get Operation",
-    		description="Retrieves a list of all rooms"
-    		)
+  
  
     @QueryMapping
     public List<Room> getAllRooms() {
@@ -47,10 +44,7 @@ public class RoomController {
     }
 
 
-    @Operation(
-    		summary="Get Operation by its ID",
-    		description=" Retrieves a specific room by its ID"
-    		)
+  
  
     @QueryMapping
     public Optional<Room> getRoomById(@Argument Long id) {
@@ -58,10 +52,7 @@ public class RoomController {
         
     }
 
-    @Operation(
-    		summary="Post Operation",
-    		description="Creates a new room"
-    		)
+   
     @MutationMapping
     public Room createRoom(
     	    @Argument String roomNumber,
@@ -89,10 +80,7 @@ public class RoomController {
     	    return roomService.createRoom(room);
     }
 
-    @Operation(
-    		summary="Put Operation by its ID",
-    		description=" Updates an existing room with the specified ID"
-    		)
+    
     @MutationMapping
     public Room updateRoom(
             @Argument Long roomId,
@@ -125,10 +113,7 @@ public class RoomController {
     }
 
     
-    @Operation(
-    		summary="Delete Operation by its ID",
-    		description=" Deletes a room with the specified ID"
-    		)
+  
     @MutationMapping
     public String deleteRoom(@Argument Long roomId) {
         // Check if the room exists
