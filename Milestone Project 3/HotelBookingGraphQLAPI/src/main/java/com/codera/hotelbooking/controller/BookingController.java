@@ -26,7 +26,6 @@ import java.util.Optional;
 
 
 @Controller
-@Tag(name="BookingController", description="Booking Management")
 public class BookingController {
     private final BookingService bookingService;
     private final UserService userService;
