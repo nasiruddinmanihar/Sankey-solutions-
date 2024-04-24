@@ -31,20 +31,14 @@ public class UserController {
     }
 
     
-    @Operation(
-    		summary="Get Operation",
-    		description="Retrieves a list of all users"
-    		)
+ 
    
     @QueryMapping
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
 
-    @Operation(
-    		summary="Get Operation by its ID",
-    		description="Retrieves a specific hotel by its ID"
-    		)
+ 
     @QueryMapping
     public Optional<User> getUserById(@Argument Long id) {
         return userService.getUserById(id);
@@ -52,10 +46,7 @@ public class UserController {
     }
 
     
-    @Operation(
-    		summary="Post Operation",
-    		description="Creates a new user"
-    		)
+  
    @MutationMapping
     public User createUser(@Argument String username, @Argument String password, @Argument String email, @Argument String role ) {
     	User user=new User();
@@ -68,10 +59,7 @@ public class UserController {
 		
     }
 
-    @Operation(
-    		summary="Put Operation by its ID",
-    		description="Updates an existing user with the specified ID"
-    		)
+  
     @MutationMapping 
     public User updateUser(
     	    @Argument Long userId,
@@ -99,10 +87,7 @@ public class UserController {
     	    return userService.updateUser(user);
     	}
 
-    @Operation(
-    		summary="Delete Operation by its ID",
-    		description="Deletes a user with the specified ID"
-    		)
+  
     @MutationMapping    
     public String deleteUser(@Argument Long userId) {
         // Check if the user exists
