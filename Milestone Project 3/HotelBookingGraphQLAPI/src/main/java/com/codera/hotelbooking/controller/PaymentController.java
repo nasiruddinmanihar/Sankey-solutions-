@@ -36,20 +36,13 @@ public class PaymentController {
         this.bookingService=bookingService;
     }
 
-    @Operation(
-    		summary="Get Operation",
-    		description="Retrieves a list of all payments."
-    		)
    
     @QueryMapping
     public List<Payment> getAllPayments() {
         return paymentService.getAllPayments();
     }
 
-    @Operation(
-    		summary="Get Operation by its ID",
-    		description= "Retrieves specific payment by its ID"
-    		)
+   
    
     @QueryMapping
     public Optional<Payment> getPaymentById(@Argument Long id) {
@@ -57,10 +50,7 @@ public class PaymentController {
         
     }
 
-    @Operation(
-    		summary="Post Operation",
-    		description="Creates a new payment"
-    		)
+  
     @MutationMapping
     public Payment createPayment(
     	    @Argument Long bookingId,
@@ -88,10 +78,7 @@ public class PaymentController {
     	    return paymentService.createPayment(payment);
     }
 
-    @Operation(
-    		summary="Put Operation by its ID",
-    		description="Updates existing payment with the specified ID"
-    		)
+
     @MutationMapping
     public Payment updatePayment(
             @Argument Long paymentId,
@@ -123,10 +110,7 @@ public class PaymentController {
         return paymentService.updatePayment(payment);
     }
     
-    @Operation(
-    		summary="Delete Operation by its ID",
-    		description="Deletes payment with the specified ID."
-    		)
+   
     @MutationMapping
     public String deletePayment(@Argument Long paymentId) {
         // Check if the payment exists
