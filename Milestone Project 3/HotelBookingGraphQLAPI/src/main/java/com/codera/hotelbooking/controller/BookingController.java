@@ -42,10 +42,7 @@ public class BookingController {
         this.roomService=roomService;
     }
 
-    @Operation(
-    		summary="Get Operation",
-    		description="Retrieves a list of all bookings"
-    		)
+  
  
     @QueryMapping
     public List<Booking> getAllBookings(){
@@ -53,10 +50,7 @@ public class BookingController {
     }
     
 
-    @Operation(
-    		summary="Get Operation by its ID",
-    		description="Retrieves a specific booking by its ID"
-    		)
+
  
     @QueryMapping
     public Optional<Booking> getBookingById(@Argument Long id) {
@@ -64,10 +58,7 @@ public class BookingController {
         
     }
 
-    @Operation(
-    		summary="Post Operation",
-    		description="Creates a new booking"
-    		)
+
     @MutationMapping
     public Booking createBooking(
     	    @Argument Long userId,
@@ -102,10 +93,6 @@ public class BookingController {
     	    return bookingService.createBooking(booking);
     	}
 
-    @Operation(
-    		summary="Put Operation by its ID",
-    		description="Updates an existing booking with the specified ID."
-    		)
     @MutationMapping
     public Booking updateBooking(
             @Argument Long bookingId,
@@ -143,10 +130,7 @@ public class BookingController {
         return bookingService.updateBooking(booking);
     }
 
-    @Operation(
-    		summary="Delete Operation by its ID",
-    		description="Deletes a booking with the specified ID"
-    		)
+ 
     @MutationMapping
     public String deleteBooking(@Argument Long bookingId) {
         // Check if the booking exists
