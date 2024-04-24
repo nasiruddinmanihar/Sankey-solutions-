@@ -7,8 +7,7 @@ import com.codera.hotelbooking.model.transactional.Payment;
 import com.codera.hotelbooking.service.BookingService;
 import com.codera.hotelbooking.service.PaymentService;
 
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.tags.Tag;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.graphql.data.method.annotation.Argument;
