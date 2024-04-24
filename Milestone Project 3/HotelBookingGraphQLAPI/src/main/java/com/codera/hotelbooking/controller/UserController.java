@@ -20,7 +20,6 @@ import java.util.Optional;
 
 
 @Controller
-
 public class UserController {
     private final UserService userService;
 
