@@ -34,21 +34,13 @@ public class BookingDetailsController {
         this.bookingService=bookingService;
     }
 
-    @Operation(
-    		summary="Get Operation",
-    		description="Retrieves a list of all booking details"
-    		)
-   
+
     @QueryMapping
     public List<BookingDetails> getAllBookingDetails() {
         return bookingDetailsService.getAllBookingDetails();
     }
 
-    @Operation(
-    		summary="Get Operation by its ID",
-    		description="Retrieves specific booking details by its ID"
-    		)
-   
+
     @QueryMapping
     public Optional<BookingDetails> getBookingDetailsById(@Argument Long id) {
         return bookingDetailsService.getBookingDetailsById(id);
@@ -56,10 +48,7 @@ public class BookingDetailsController {
     }
 
     
-    @Operation(
-    		summary="Post Operation",
-    		description="Creates new booking details"
-    		)
+
     @MutationMapping
     public BookingDetails createBookingDetails(
     	    @Argument Long bookingId,
@@ -85,10 +74,7 @@ public class BookingDetailsController {
     	    return bookingDetailsService.createBookingDetails(bookingDetails);
     	}
     
-    @Operation(
-    		summary="Put Operation by its ID",
-    		description="Updates existing booking details with the specified ID"
-    		)
+  
     @MutationMapping
     public BookingDetails updateBookingDetails(
             @Argument Long bookingDetailsId,
@@ -118,10 +104,7 @@ public class BookingDetailsController {
         return bookingDetailsService.updateBookingDetails(bookingDetails);
     }
 
-    @Operation(
-    		summary="Delete Operation by its ID",
-    		description="Deletes booking details with the specified ID"
-    		)
+  
     @MutationMapping
     public String deleteBookingDetails(@Argument Long bookingDetailsId) {
         // Check if the booking details exists
