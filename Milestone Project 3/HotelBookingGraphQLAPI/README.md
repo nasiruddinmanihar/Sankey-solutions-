@@ -19,11 +19,12 @@ This project provides a GraphQL API for managing hotel bookings. It allows clien
   - `hotel_booking_graphql` is the name of the database schema used by the application.
 
 In application.properties you need to change 
-spring.datasource.url= <Your database url>
 
-spring.datasource.username= <Your username>
+spring.datasource.url= <Your Database Url>
 
-spring.datasource.password= <Your password>
+spring.datasource.username= <Your Username>
+
+spring.datasource.password= <Your Password>
 
 
 #Port Number - 8081
