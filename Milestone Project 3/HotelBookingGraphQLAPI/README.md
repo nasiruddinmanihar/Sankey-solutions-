@@ -20,7 +20,9 @@ This project provides a GraphQL API for managing hotel bookings. It allows clien
 
 In application.properties you need to change 
 spring.datasource.url=<Your database url>
+
 spring.datasource.username=<Your username>
+
 spring.datasource.password=<Your password>
 
 
