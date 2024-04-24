@@ -33,21 +33,7 @@ import io.swagger.v3.oas.annotations.servers.Server ;
 
 @SpringBootApplication
 @Import(CorsConfig.class)
-@OpenAPIDefinition(
-		info= @Info(
-				title="Hotel Booking Application OPEN GRAPHQL API",
-				version="1.0.0",
-				description="Hotel Booking Website OPEN GRAPHQL API Documentation,"
-						+ "Made by Nasiruddin Manihar "
-				
-				),
-		
-		servers=@Server(
-				url="http://localhost:8081/hotelbooking",
-				description="Hotel Booking OPEN API url"
-				)
-		
-		)
+
 public class HotelBookingRestApiApplication   {
 
 //	private final BookingDetailsRepository bookingDetailsRepository;
