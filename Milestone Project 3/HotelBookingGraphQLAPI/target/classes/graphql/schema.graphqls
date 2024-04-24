@@ -1,0 +1,95 @@
+
+type Query{
+
+  getAllUsers: [User],
+  getAllHotels: [Hotel],
+  getAllRooms: [Room],
+  getAllBookings: [Booking],
+  getAllBookingDetails: [BookingDetails],
+  getAllPayments: [Payment]
+  
+  
+  getUserById(id: ID!): User,
+  getHotelById(id: ID!): Hotel,
+  getRoomById(id: ID!): Room,
+  getBookingById(id: ID!): Booking,
+  getBookingDetailsById(id: ID!): BookingDetails,
+  getPaymentById(id: ID!): Payment
+}
+
+type Mutation{
+
+  createUser(username: String, password: String, email: String, role: String): User
+  updateUser(userId: ID, username: String, password: String, email: String, role: String): User
+  deleteUser(userId: ID): User
+  
+  
+  createHotel(name: String, location: String): Hotel
+  updateHotel(hotelId: ID, name: String, location: String): Hotel
+  deleteHotel(hotelId: ID): Hotel
+  
+  
+  createRoom(hotelId: ID, roomNumber: String, capacity: Int, price: Float): Room
+  updateRoom(roomId: ID, hotelId: ID, roomNumber: String, capacity: Int, price: Float): Room
+  deleteRoom(roomId: ID): Room
+  
+  createBooking(userId: ID, roomId: ID, checkInDate: String, checkOutDate: String): Booking
+  updateBooking(bookingId: ID, userId: ID, roomId: ID, checkInDate: String, checkOutDate: String): Booking
+  deleteBooking(bookingId: ID): Booking
+  
+  createBookingDetails(bookingId: ID, guestName: String, guestEmail: String): BookingDetails
+  updateBookingDetails(bookingDetailsId: ID, bookingId: ID, guestName: String, guestEmail: String): BookingDetails
+  deleteBookingDetails(bookingDetailsId: ID): BookingDetails
+  
+  createPayment(bookingId: ID, amount: Float, paymentDate: String, paymentMethod: String!): Payment
+  updatePayment(paymentId: ID, bookingId: ID, amount: Float, paymentDate: String, paymentMethod: String): Payment
+  deletePayment(paymentId: ID): Payment
+  
+}
+
+
+
+type User {
+  id: ID!,
+  username: String,
+  password: String,
+  email: String,
+  role: String
+}
+
+type Hotel {
+  id: ID!
+  name: String,
+  location: String
+}
+
+type Room {
+  id: ID!
+  hotel: Hotel,
+  roomNumber: String,
+  capacity: Int,
+  price: Float!
+}
+
+type Booking {
+  id: ID!
+  user: User,
+  room: Room,
+  checkInDate: String,
+  checkOutDate: String,
+}
+
+type BookingDetails {
+  id: ID!
+  booking: Booking,
+  guestName: String,
+  guestEmail: String
+}
+
+type Payment {
+  id: ID!
+  booking: Booking,
+  amount: Float,
+  paymentDate: String,
+  paymentMethod: String
+}
