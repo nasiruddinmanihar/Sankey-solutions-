@@ -31,31 +31,21 @@ public class HotelController {
         this.hotelService = hotelService;
     }
 
-    @Operation(
-    		summary="Get Operation",
-    		description="Retrieves a list of all hotels"
-  )
+   
     @QueryMapping
     public List<Hotel> getAllHotels() {
         return hotelService.getAllHotels();
     }
 
 
-    @Operation(
-    		summary="Get Operation by its ID",
-    		description="Retrieves a specific hotel by its ID"
-    		)
+ 
 
     @QueryMapping
     public Optional<Hotel> getHotelById(@Argument Long id) {
         return hotelService.getHotelById(id);
         
     }
-    
-    @Operation(
-    		summary="Post Operation",
-    		description="Creates a new hotel"
-    		)
+
     @MutationMapping
     public Hotel createHotel(@Argument String name, @Argument String location) {
     	Hotel hotel = new Hotel();
@@ -66,10 +56,7 @@ public class HotelController {
     }
     
     
-    @Operation(
-    		summary="Put Operation by its ID",
-    		description="Updates an existing hotel with the specified ID"
-    		)
+ 
     @MutationMapping
     public Hotel updateHotel(
     	    @Argument Long hotelId,
@@ -94,10 +81,7 @@ public class HotelController {
     	}
     
     
-    @Operation(
-    		summary="Delete Operation by its ID",
-    		description="Deletes a hotel with the specified ID"
-    		)
+   
     @MutationMapping
     public String deleteHotel(@Argument Long hotelId) {
         // Check if the hotel exists
