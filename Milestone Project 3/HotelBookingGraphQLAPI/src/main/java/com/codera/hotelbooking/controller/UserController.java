@@ -13,15 +13,14 @@ import org.springframework.web.bind.annotation.*;
 import com.codera.hotelbooking.model.authentication.User;
 import com.codera.hotelbooking.service.UserService;
 
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.tags.Tag;
+
 
 import java.util.List;
 import java.util.Optional;
 
 
 @Controller
-@Tag(name="UserController", description="User Management")
+
 public class UserController {
     private final UserService userService;
 
