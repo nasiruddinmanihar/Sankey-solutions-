@@ -13,10 +13,10 @@ This project provides a GraphQL API for managing hotel bookings. It allows clien
 
 ##Database Configuration
 - The application is connected to a MYSQL database to store and retrieve data.
-- The database URL is `jdbc:mysql://localhost:3306/hotel_booking_db`, where:
+- The database URL is `jdbc:mysql://localhost:3306/hotel_booking_graphql`, where:
   - `jdbc:mysql://` indicates the JDBC connection protocol for MySQL.
   - `localhost:3306` represents the host and port where MySQL is running. Update this if your database is hosted elsewhere or uses a different port.
-  - `hotel_booking_db` is the name of the database schema used by the application.
+  - `hotel_booking_graphql` is the name of the database schema used by the application.
 
 In application.properties you need to change 
 spring.datasource.url=<Your database url>
