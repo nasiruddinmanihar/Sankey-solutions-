@@ -14,15 +14,13 @@ import com.codera.hotelbooking.model.authentication.User;
 import com.codera.hotelbooking.model.master.Hotel;
 import com.codera.hotelbooking.service.HotelService;
 
-import io.swagger.v3.oas.annotations.*;
-import io.swagger.v3.oas.annotations.tags.Tag;
+
 
 import java.util.List;
 import java.util.Optional;
 
 
 @Controller
-@Tag(name="HotelController", description="Hotel Management")
 public class HotelController {
     private final HotelService hotelService;
 
