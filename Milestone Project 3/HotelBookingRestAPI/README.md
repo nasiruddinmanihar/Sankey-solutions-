@@ -18,9 +18,12 @@ Database Configuration
 
 
 In application.properties you need to change 
-spring.datasource.url=<Your database url>
-spring.datasource.username=<Your username>
-spring.datasource.password=<Your password>
+
+spring.datasource.url='Your Database url'
+
+spring.datasource.username='Your Username
+
+spring.datasource.password='Your Password'
 
 Technologies Used:-
 Spring Boot
