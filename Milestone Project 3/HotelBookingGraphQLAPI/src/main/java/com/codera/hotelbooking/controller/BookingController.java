@@ -18,8 +18,7 @@ import com.codera.hotelbooking.service.BookingService;
 import com.codera.hotelbooking.service.RoomService;
 import com.codera.hotelbooking.service.UserService;
 
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.tags.Tag;
+
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -27,7 +26,6 @@ import java.util.Optional;
 
 
 @Controller
-@Tag(name="BookingController", description="Booking Management")
 public class BookingController {
     private final BookingService bookingService;
     private final UserService userService;
