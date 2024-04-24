@@ -6,7 +6,8 @@ import com.codera.hotelbooking.model.master.Room;
 import com.codera.hotelbooking.model.transactional.Payment;
 import com.codera.hotelbooking.service.BookingService;
 import com.codera.hotelbooking.service.PaymentService;
-
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ import org.springframework.graphql.data.method.annotation.MutationMapping;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+
 
 import java.time.LocalDateTime;
 import java.util.List;
